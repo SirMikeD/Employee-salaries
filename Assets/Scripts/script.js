@@ -24,7 +24,9 @@ const collectEmployees = function() {
 const displayAverageSalary = function(employeesArray) {
   const totalSalary = employeesArray.reduce((acc, employee) => acc + employee.salary, 0);
   const averageSalary = totalSalary / employeesArray.length;
-
+    //Took a while but figured out I had forgotten the lines below to display the information properly
+  console.log(`Average Salary: $${averageSalary.toFixed(2)}`);
+  console.log(`Number of Employees: ${employeesArray.length}`);
 };
 
 // Select a random employee
