@@ -29,10 +29,25 @@ const displayAverageSalary = function(employeesArray) {
   console.log(`Number of Employees: ${employeesArray.length}`);
 };
 
-// Select a random employee
-const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
-}
+// Select a random employee <--This is not following the request to have employees genrated alphabetically but the code for it is still below and commented out
+
+// const getRandomEmployee = function(employeesArray) {
+//   const randomIndex = Math.floor(Math.random() * employeesArray.length);
+//   const randomEmployee = employeesArray[randomIndex];
+
+//   console.log(`Random Employee: ${randomEmployee.firstName} ${randomEmployee.lastName}`);
+// };
+
+// Select an employee alphabetically by last name -- this is the requested code to choose employees in alphabetical order, by their last name
+const getAlphabeticalEmployee = function(employeesArray) {
+  // Sort employees alphabetically by last name
+  const sortedEmployees = employeesArray.slice().sort((a, b) => a.lastName.localeCompare(b.lastName));
+  
+  // Select the first employee from the sorted array
+  const selectedEmployee = sortedEmployees[0];
+
+  console.log(`Alphabetical Employee: ${selectedEmployee.firstName} ${selectedEmployee.lastName}`);
+};
 
 /*
   ====================
