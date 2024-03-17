@@ -19,12 +19,13 @@ const collectEmployees = function() {
   return employees;
 };
 
-
-
-// Display the average salary
+// Display the average salary 
+  //the line below are setting up the arrays to be used, thus the const Variable
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
-}
+  const totalSalary = employeesArray.reduce((acc, employee) => acc + employee.salary, 0);
+  const averageSalary = totalSalary / employeesArray.length;
+
+};
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
