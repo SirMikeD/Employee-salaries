@@ -1,17 +1,22 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-// Collect employee data
-  // TODO: Get user input to create and return an array of employee objects -The code below should prompt and use the information submitted by the user
+// Collect employee data using alert prompts
 const collectEmployees = function() {
   const employees = [];
   
   while (true) {
     const firstName = prompt("Enter employee's first name:");
-    if (!firstName) break; // Exit loop if Cancel is clicked
+    if (firstName === null) break; // Exit loop if Cancel is clicked
+
     const lastName = prompt("Enter employee's last name:");
+    if (lastName === null) break; // Exit loop if Cancel is clicked
+
     const salaryInput = prompt("Enter employee's salary:");
-    const salary = isNaN(parseFloat(salaryInput)) ? 0 : parseFloat(salaryInput); // Validate salary input, default to 0 if invalid
+    if (salaryInput === null) break; // Exit loop if Cancel is clicked
+
+    // For salary input, set to 0 if invalid
+    const salary = isNaN(parseFloat(salaryInput)) ? 0 : parseFloat(salaryInput); 
     
     employees.push({ firstName, lastName, salary });
   }
@@ -20,34 +25,22 @@ const collectEmployees = function() {
 };
 
 // Display the average salary 
-  //the line below are setting up the arrays to be used, thus the const Variable
 const displayAverageSalary = function(employeesArray) {
   const totalSalary = employeesArray.reduce((acc, employee) => acc + employee.salary, 0);
   const averageSalary = totalSalary / employeesArray.length;
-    //Took a while but figured out I had forgotten the lines below to display the information properly
+
   console.log(`Average Salary: $${averageSalary.toFixed(2)}`);
   console.log(`Number of Employees: ${employeesArray.length}`);
 };
 
-// Select a random employee <--This is not following the request to have employees genrated alphabetically but the code for it is still below and commented out
+// Select a random employee
+const getRandomEmployee = function(employeesArray) {
+  const randomIndex = Math.floor(Math.random() * employeesArray.length);
+  const randomEmployee = employeesArray[randomIndex];
 
-// const getRandomEmployee = function(employeesArray) {
-//   const randomIndex = Math.floor(Math.random() * employeesArray.length);
-//   const randomEmployee = employeesArray[randomIndex];
-
-//   console.log(`Random Employee: ${randomEmployee.firstName} ${randomEmployee.lastName}`);
-// };
-
-// Select an employee alphabetically by last name -- this is the requested code to choose employees in alphabetical order, by their last name
-const getAlphabeticalEmployee = function(employeesArray) {
-  // Sort employees alphabetically by last name
-  const sortedEmployees = employeesArray.slice().sort((a, b) => a.lastName.localeCompare(b.lastName));
-  
-  // Select the first employee from the sorted array
-  const selectedEmployee = sortedEmployees[0];
-
-  console.log(`Alphabetical Employee: ${selectedEmployee.firstName} ${selectedEmployee.lastName}`);
+  console.log(`Random Employee: ${randomEmployee.firstName} ${randomEmployee.lastName}`);
 };
+
 
 /*
   ====================
