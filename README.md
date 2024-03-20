@@ -25,7 +25,7 @@ Additionally, the console should show computed and aggregated data, presumably r
 * CSS
 * JavaScript
 ## Preview
-(./Assets/Pictures/Screenshot.jpg)
+!(./Assets/Pictures/Screenshot.jpg)
 
 ## License
 This project is licensed under the [MIT License]:please let me know the best place to find this information.
