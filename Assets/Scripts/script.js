@@ -7,13 +7,14 @@ const collectEmployees = function() {
   
   while (true) {
     const firstName = prompt("Enter employee's first name:");
-    if (firstName === null) break; // Exit loop if Cancel is clicked
+    if (firstName === null) break; // Exit loop if Cancel is clicked, at least 1 of these prompt should stop the loop on cancel
 
     const lastName = prompt("Enter employee's last name:");
-    if (lastName === null) break; // Exit loop if Cancel is clicked
+    if (lastName === null) break; //This exits the loop if cancel is clicked, comment out to continue with the loop to the 3rd prompt
+
 
     const salaryInput = prompt("Enter employee's salary:");
-    if (salaryInput === null) break; // Exit loop if Cancel is clicked
+    if (salaryInput === null) break; //This exits the loop if cancel is clicked, comment out to continue with the loop to the 1st request
 
     // For salary input, set to 0 if invalid
     const salary = isNaN(parseFloat(salaryInput)) ? 0 : parseFloat(salaryInput); 
