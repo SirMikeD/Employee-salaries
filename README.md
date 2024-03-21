@@ -1,4 +1,3 @@
-
 # Employee Payroll Tracker
 This web application is designed to serve as an employee payroll tracker, catering specifically to the needs of payroll managers. It allows users to efficiently manage and monitor their employees' payroll data, facilitating proper budgeting for the company.
 
@@ -28,6 +27,6 @@ Additionally, the console should show computed and aggregated data, presumably r
 ![](./Assets/Pictures/Screenshot.jpg)
 
 ## License
-This project is licensed under the [MIT License]:please let me know the best place to find this information.
+This project is licensed under the MIT License. <br> [please let me know the best place to find this information I just used one I saw on another persons README. file]
 
 * Feel free to contribute to the project by forking it and submitting pull requests for any enhancements or fixes. If you encounter any issues or have suggestions for improvements, please open an issue. Thank you for using the Employee Payroll Tracker! 🚀
